@@ -64,7 +64,4 @@ public class DialogController : MonoBehaviour {
 			
 		}
 	}
-	public int GetIndex(){
-		return this.index;
-	}
 }

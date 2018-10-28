@@ -3,35 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
-	public float speed;
-	public float jumpForce;
-	private float extraJump;
+	public float speed;  // Berserk's running speed
+	public float jumpForce; //Berserk's jumping force.
+	private float extraJump; //extra jump on the mid-air
 	public float extraJumpOption; // how many time player can do a extra jump in the mid-air ;)
 
-	private float moveInput;
+	private float moveInput; // Move key
 	private Rigidbody2D rgb;
 	private bool facingRight=true;
 
-	private bool isGrounded;
+	private bool isGrounded; // Is touching grass
 	public Transform groundCheck;
 	public float groundRadius;
 	public LayerMask whatisGround;
 
-	private Animator anime;
+	public Animator hurtPanel;
+	private Animator anime; //Berserk animation
 	public AudioClip landEffect; //landing sound effect
 	public AudioClip jumpEffect; //jumping sound effect
 
-	public GameObject landingEffect;
+	public GameObject landingEffect; 
 	public bool canMove=true;
 	
 	public GameObject playerArm;
-	public GameObject vcm1;
-	public GameObject vcm2;
+	public GameObject vcm1;  // virtual following berserk camera 1
+	public GameObject vcm2; // virtual following berserk with weapons camera 2
 	public  AudioClip powerup;
+	public GameObject hurtEffect;
+	
+	
 	void Start(){
-
 		anime=GetComponent<Animator>();
 		extraJump=extraJumpOption; 
 		rgb=GetComponent<Rigidbody2D>();
@@ -66,21 +70,30 @@ public class PlayerController : MonoBehaviour {
 			Instantiate(landingEffect,this.transform.position-pos,Quaternion.identity);
 			AudioSource.PlayClipAtPoint(landEffect,this.transform.position);
 		}
+
+		//pick up weapon from the Void.
 		if(other.gameObject.tag=="sword"){
 			Destroy(other.gameObject);
 		}
 		if(other.gameObject.tag=="shield"){
-			AudioSource.PlayClipAtPoint(powerup,transform.position);
-			this.gameObject.SetActive(false);
-			playerArm.SetActive(true);
-			vcm1.SetActive(false);
-			vcm2.SetActive(true);
 			Destroy(other.gameObject);
-			
 		}
+		
 	}
 
+	private void OnTriggerEnter2D(Collider2D other) {
+
+		if(other.gameObject.tag=="trans"){
+			playerArm.SetActive(true);
+			AudioSource.PlayClipAtPoint(powerup,transform.position);
+			this.gameObject.SetActive(false);
+			playerArm.transform.position=other.transform.position;
+			vcm1.SetActive(false);
+			vcm2.SetActive(true);
+		}
+	}
 	void Update(){
+		
 		if(!isGrounded){
 			anime.SetBool("isJumping",true);
 		}
@@ -107,5 +120,9 @@ public class PlayerController : MonoBehaviour {
 		Vector3 Scaler=transform.localScale;
 		Scaler.x*=-1;
 		transform.localScale=Scaler;
+	}
+	public void Damage(){
+		hurtPanel.SetTrigger("Hurt");
+		Instantiate(hurtEffect,transform.position,Quaternion.identity);
 	}
 }

@@ -12,6 +12,10 @@ TagManager:
   - shield
   - cm1
   - cm2
+  - ckm
+  - optacle
+  - Player2
+  - trans
   layers:
   - Default
   - TransparentFX
