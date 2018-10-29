@@ -16,6 +16,12 @@ TagManager:
   - optacle
   - Player2
   - trans
+  - limit
+  - swingsword
+  - Ghost
+  - boss1
+  - bosssword
+  - boss1_lim
   layers:
   - Default
   - TransparentFX
@@ -27,7 +33,7 @@ TagManager:
   - 
   - Player
   - Ground
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -55,4 +61,7 @@ TagManager:
     locked: 0
   - name: Guide
     uniqueID: 235390137
+    locked: 0
+  - name: Enemy
+    uniqueID: 755439575
     locked: 0

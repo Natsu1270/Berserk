@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 222481146968704534}
   - component: {fileID: 114832348694883220}
   - component: {fileID: 114207164217639628}
+  - component: {fileID: 114741309842990986}
   - component: {fileID: 114015273522878640}
   m_Layer: 8
   m_Name: PlayerArmed
@@ -484,6 +485,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   hurtSound: {fileID: 8300000, guid: ae1c8f675894552409836c135ea97607, type: 3}
+  skullDead: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &114589189711391772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -498,6 +501,7 @@ MonoBehaviour:
   speed: 30
   jumpForce: 70
   extraJumpOption: 0
+  facingRight: 1
   groundCheck: {fileID: 4399751888796042}
   groundRadius: 0.5
   whatisGround:
@@ -514,6 +518,25 @@ MonoBehaviour:
   vcm2: {fileID: 0}
   powerup: {fileID: 8300000, guid: 4b012365517f6954f83feaf699152dec, type: 3}
   hurtEffect: {fileID: 1820061236963564, guid: f518f6f646d915d40badca437d6dd55e, type: 2}
+--- !u!114 &114741309842990986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1009024721407678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc0d2c63c7f4b384a8b59c683b6e4739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwAttack: 0.3
+  attackPos: {fileID: 0}
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 0
+  damage: 0
+  swordSound: {fileID: 0}
 --- !u!114 &114832348694883220
 MonoBehaviour:
   m_ObjectHideFlags: 1

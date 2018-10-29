@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 
 	private float moveInput; // Move key
 	private Rigidbody2D rgb;
-	private bool facingRight=true;
+	public bool facingRight=true;
 
 	private bool isGrounded; // Is touching grass
 	public Transform groundCheck;
@@ -33,15 +33,17 @@ public class PlayerController : MonoBehaviour {
 	public GameObject vcm2; // virtual following berserk with weapons camera 2
 	public  AudioClip powerup;
 	public GameObject hurtEffect;
-	
+
 	
 	void Start(){
+
 		anime=GetComponent<Animator>();
 		extraJump=extraJumpOption; 
 		rgb=GetComponent<Rigidbody2D>();
 	}
 
 	void FixedUpdate(){
+		
 		isGrounded=Physics2D.OverlapCircle(groundCheck.position,groundRadius,whatisGround); //Checks if a collider falls within a circular area.
 		if(canMove==true){
 			moveInput=Input.GetAxisRaw("Horizontal"); //left=-1 null=0 right=1
@@ -93,7 +95,6 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 	void Update(){
-		
 		if(!isGrounded){
 			anime.SetBool("isJumping",true);
 		}
@@ -101,16 +102,17 @@ public class PlayerController : MonoBehaviour {
 			extraJump=extraJumpOption;
 			anime.SetBool("isJumping",false);
 		}
+		
 		if(canMove){
 				if(Input.GetKeyDown(KeyCode.UpArrow)){
 				
-				if(extraJump>0){
-					rgb.velocity=Vector2.up*jumpForce;
-					extraJump--;
-					AudioSource.PlayClipAtPoint(jumpEffect,this.transform.position);
-				}else if(extraJump==0 && isGrounded){
-					rgb.velocity=Vector2.up*jumpForce;
-					AudioSource.PlayClipAtPoint(jumpEffect,this.transform.position);
+					if(extraJump>0){
+						rgb.velocity=Vector2.up*jumpForce;
+						extraJump--;
+						AudioSource.PlayClipAtPoint(jumpEffect,this.transform.position);
+					}else if(extraJump==0 && isGrounded){
+						rgb.velocity=Vector2.up*jumpForce;
+						AudioSource.PlayClipAtPoint(jumpEffect,this.transform.position);
 				}
 			}
 		}

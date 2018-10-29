@@ -11,6 +11,8 @@ public class Health : MonoBehaviour {
 	public AudioClip hurtSound;
 	private PlayerController player;
 	private Rigidbody2D rgb;
+	public GameObject skullDead;
+	public AudioClip deathSound;
 
 	private void Awake() {
 		rgb=GetComponent<Rigidbody2D>();
@@ -29,7 +31,13 @@ public class Health : MonoBehaviour {
 			}
 		}
 		if(health<=0){
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			
+				this.gameObject.SetActive(false);
+				Instantiate(skullDead,transform.GetChild(0).transform.position,Quaternion.identity);
+				AudioSource.PlayClipAtPoint(deathSound,transform.position);
+				Invoke("Lost",2f);
+			
+			
 		}
 		if(health>0){
 			if(Input.GetKeyDown(KeyCode.Escape)){
@@ -41,9 +49,12 @@ public class Health : MonoBehaviour {
 		if(other.CompareTag("optacle")){
 			TakenDamage(1);
 		}
+		if(other.CompareTag("bosssword")){
+			TakenDamage(1);
+		}
 	}
 	void Lost(){
-		
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 	public void TakenDamage(int damage){
 		rgb.velocity=Vector2.up*50;

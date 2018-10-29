@@ -1050,7 +1050,7 @@ RectTransform:
   m_GameObject: {fileID: 849306884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1634274359}
   m_RootOrder: 0
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6f44dcd474844a8d0e0426dcaec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInTime: 1.5
+  fadeInTime: 3
 --- !u!114 &849306887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1684,6 +1684,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605874418487922, guid: 8c87d31738ec39440914742ae552cc97, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c87d31738ec39440914742ae552cc97, type: 2}
