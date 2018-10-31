@@ -8,9 +8,13 @@ public class helperManager : MonoBehaviour {
 	public AudioClip release;
 	public GameObject btnContinue;
 	private AudioSource thevoidMusic;
+	public GameObject gun;
+	private LevelMusic lvm;
 	// Use this for initialization
 	void Start () {
+		lvm=GameObject.FindGameObjectWithTag("lvMusic").GetComponent<LevelMusic>();
 		thevoidMusic=GetComponent<AudioSource>();
+		
 	}
 	
 	// Update is called once per frame
@@ -18,7 +22,8 @@ public class helperManager : MonoBehaviour {
 		
 	}
 	private void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.tag=="Player"){
+		if(other.gameObject.tag=="Player" ||other.CompareTag("Player2")){
+			lvm.music.Pause();
 			thevoidMusic.Play();
 			//other.gameObject.GetComponent<PlayerController>().canMove=false;
 			//other.transform.position=this.transform.position-new Vector3(10f,0f,0f);
@@ -28,12 +33,21 @@ public class helperManager : MonoBehaviour {
 	}
 	private void OnTriggerExit2D(Collider2D other) {
 		if(other.gameObject.tag=="Player"){
+			lvm.music.UnPause();
 			thevoidMusic.Stop();
 			AudioSource.PlayClipAtPoint(release,transform.position);
 			Vector3 posSword=new Vector3(transform.position.x+18f,transform.position.y,transform.position.z);
 			Vector3 posShield=new Vector3(transform.position.x+23f,transform.position.y,transform.position.z);
 			Instantiate(sword,posSword,Quaternion.identity);
 			Instantiate(shield,posShield,Quaternion.identity);
+			Destroy(this.gameObject);
+		}
+		if(other.CompareTag("Player2")){
+			lvm.music.UnPause();
+			thevoidMusic.Stop();
+			AudioSource.PlayClipAtPoint(release,transform.position);
+			Vector3 posShield=new Vector3(transform.position.x+13f,transform.position.y,transform.position.z);
+			Instantiate(gun,posShield,Quaternion.identity);
 			Destroy(this.gameObject);
 		}
 	}

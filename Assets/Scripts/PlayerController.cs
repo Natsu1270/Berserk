@@ -80,7 +80,9 @@ public class PlayerController : MonoBehaviour {
 		if(other.gameObject.tag=="shield"){
 			Destroy(other.gameObject);
 		}
-		
+		if(other.gameObject.tag=="gun"){
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
@@ -104,7 +106,7 @@ public class PlayerController : MonoBehaviour {
 		}
 		
 		if(canMove){
-				if(Input.GetKeyDown(KeyCode.UpArrow)){
+				if(Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown(KeyCode.W)){
 				
 					if(extraJump>0){
 						rgb.velocity=Vector2.up*jumpForce;

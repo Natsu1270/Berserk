@@ -39,11 +39,7 @@ public class Health : MonoBehaviour {
 			
 			
 		}
-		if(health>0){
-			if(Input.GetKeyDown(KeyCode.Escape)){
-				SceneManager.LoadScene("DirectiveScene");
-			}
-		}
+		
 	}
 	private void OnTriggerEnter2D(Collider2D other) {
 		if(other.CompareTag("optacle")){

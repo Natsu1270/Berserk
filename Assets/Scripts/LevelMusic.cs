@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelMusic : MonoBehaviour {
 	public AudioClip[] lvMusicArr;
-	private AudioSource music;
+	public AudioSource music;
 	// Use this for initialization
 	void Awake(){
 		DontDestroyOnLoad(gameObject);

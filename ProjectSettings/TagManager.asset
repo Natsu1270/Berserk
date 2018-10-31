@@ -22,6 +22,14 @@ TagManager:
   - boss1
   - bosssword
   - boss1_lim
+  - Continue
+  - run_ene
+  - fly_ene
+  - roll_spawner
+  - lvMusic
+  - optacle_sword
+  - gun
+  - light
   layers:
   - Default
   - TransparentFX
@@ -34,7 +42,7 @@ TagManager:
   - Player
   - Ground
   - Enemy
-  - 
+  - env
   - 
   - 
   - 

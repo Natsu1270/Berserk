@@ -9,15 +9,17 @@ public class DialogController : MonoBehaviour {
 	private int index=0;
 	public float typingSpeed;
 	public GameObject contBtn;
+	private GameObject playerGO;
 	private PlayerController player;
 	private AudioSource nextSound;
 	private bool canSpace=true;
-
+	
 	void Start(){
 		nextSound=GetComponent<AudioSource>();
 		currentSentences=sentences;
 		StartCoroutine(Type());
-		player=GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+		playerGO=GameObject.FindGameObjectWithTag("Player");
+		player=playerGO.GetComponent<PlayerController>();
 	}
 	void Update(){
 		if(index<sentences.Length){

@@ -15,9 +15,6 @@ public class cursor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Space)){
-			trail.startColor=Color.cyan;
-		}
 		Vector2 pos=Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		transform.position=pos;
 	}

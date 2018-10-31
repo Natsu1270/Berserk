@@ -11,7 +11,11 @@ public class TheCloudFollow : MonoBehaviour {
 	private Vector3 newPos;
 	// Use this for initialization
 	void Start () {
-		player=GameObject.FindGameObjectWithTag("Player");
+		GameObject p=GameObject.FindGameObjectWithTag("Player");
+		if(p==null){
+			p=GameObject.FindGameObjectWithTag("Player2");
+		}
+		player=p;
 		playerPos=player.GetComponent<Transform>();
 	}
 	

@@ -17,6 +17,9 @@ private AudioSource pop;
 	public void resetLevel(){
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
+	public void ExitGame(){
+		Application.Quit();
+	}
 	// Update is called once per frame
 	void Update () {
 		if(SceneManager.GetActiveScene().buildIndex==0){

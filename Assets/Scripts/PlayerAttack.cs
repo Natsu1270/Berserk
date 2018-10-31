@@ -11,23 +11,46 @@ public class PlayerAttack : MonoBehaviour {
 	public float attackRange;
 	public int damage;
 	public AudioClip swordSound;
+	public GameObject slash;
+	public GameObject boss;
+	private PlayerController playerController;
 	
 	void Start(){
+		playerController=GetComponent<PlayerController>();
 		playeranime=GetComponent<Animator>();
+		timeBtwAttack=0;
 	}
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Z)){
+		if(timeBtwAttack<=0){
+			if(Input.GetKeyDown(KeyCode.Z)){
+				Vector3 sPos=new Vector3(5f,0f,0f);
+				if(playerController.facingRight){
+					Instantiate(slash,transform.GetChild(0).transform.position+sPos,Quaternion.identity);
+				}else if(playerController.facingRight==false){
+					Instantiate(slash,transform.GetChild(0).transform.position-sPos,Quaternion.identity);
+				}
 				AudioSource.PlayClipAtPoint(swordSound,transform.position);
 				playeranime.SetTrigger("Attack");
 				Collider2D[] enemyToDamage=Physics2D.OverlapCircleAll(attackPos.position,attackRange,whatIsEnemy);
 				for(int i=0;i<enemyToDamage.Length;i++){
-					enemyToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
-					enemyToDamage[i].GetComponent<boss1>().TakeDame(damage);
-
+					if(enemyToDamage[i].gameObject.tag=="run_ene" || enemyToDamage[i].gameObject.tag=="fly_ene"){
+						enemyToDamage[i].GetComponent<Enemy>().TakeDamage(damage); //damage to quai.
+					}else if(enemyToDamage[i].gameObject.tag=="roll_spawner"){
+						enemyToDamage[i].GetComponent<Enemy>().BossTakeDam(damage);} //damage to boss
+					else if(enemyToDamage[i].gameObject.tag=="boss1"){
+						enemyToDamage[i].GetComponent<boss1>().TakeDame(damage); //damage to boss
+					}else if(enemyToDamage[i].gameObject.tag=="Ghost"){
+						enemyToDamage[i].GetComponent<ghostBehavior>().TakenDamage(damage);
+					}
 				}
+				timeBtwAttack=startTimeBtwAttack;
+				}
+			}else{
+				timeBtwAttack-=Time.deltaTime;
+			}
+				
 		}
-	}
 	void OnDrawGizmosSelected(){
 		Gizmos.color=Color.red;
 		Gizmos.DrawWireSphere(attackPos.position,attackRange);
