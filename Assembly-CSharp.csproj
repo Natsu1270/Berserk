@@ -53,9 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\enePorj.cs" />
-     <Compile Include="Assets\finalboxload.cs" />
-     <Compile Include="Assets\ProjectileZZ.cs" />
+     <Compile Include="Assets\playerHurt.cs" />
      <Compile Include="Assets\Scripts\attackBehavior.cs" />
      <Compile Include="Assets\Scripts\attackBehavior1.cs" />
      <Compile Include="Assets\Scripts\Boss.cs" />
@@ -79,7 +77,9 @@
      <Compile Include="Assets\Scripts\DialogController.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\enemyformation.cs" />
+     <Compile Include="Assets\Scripts\enePorj.cs" />
      <Compile Include="Assets\Scripts\FadeInOnLoad.cs" />
+     <Compile Include="Assets\Scripts\finalboxload.cs" />
      <Compile Include="Assets\Scripts\flyEnemy.cs" />
      <Compile Include="Assets\Scripts\ghostBehavior.cs" />
      <Compile Include="Assets\Scripts\gunController.cs" />
@@ -99,14 +99,19 @@
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\ProjectileZZ.cs" />
      <Compile Include="Assets\Scripts\roll_pos.cs" />
+     <Compile Include="Assets\Scripts\scenetrans.cs" />
      <Compile Include="Assets\Scripts\SelectOnOption.cs" />
      <Compile Include="Assets\Scripts\spawnGhost.cs" />
+     <Compile Include="Assets\Scripts\swordTrigger.cs" />
      <Compile Include="Assets\Scripts\textMenu.cs" />
      <Compile Include="Assets\Scripts\TheCloudFollow.cs" />
      <Compile Include="Assets\Scripts\TheSunFollow.cs" />
      <Compile Include="Assets\Scripts\volumnController.cs" />
-     <Compile Include="Assets\swordTrigger.cs" />
+     <Compile Include="Assets\Scripts\Weapon.cs" />
+     <Compile Include="Assets\suicides.cs" />
+     <Compile Include="Assets\suicideSqua.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -140,7 +145,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-     <Compile Include="Assets\Weapon.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

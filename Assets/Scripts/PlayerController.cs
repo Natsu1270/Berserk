@@ -126,6 +126,7 @@ public class PlayerController : MonoBehaviour {
 		transform.localScale=Scaler;
 	}
 	public void Damage(){
+		anime.SetTrigger("hurt");
 		hurtPanel.SetTrigger("Hurt");
 		Instantiate(hurtEffect,transform.position,Quaternion.identity);
 	}

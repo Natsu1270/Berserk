@@ -7,12 +7,15 @@ using UnityEngine.SceneManagement;
 public class Health2 : MonoBehaviour {
 	private checkPointMana ckm;
 	public int health;
-	public Image[] hearts;
+	//public Image[] hearts;
 	public AudioClip hurtSound;
 	private PlayerController player;
 	private Rigidbody2D rgb;
 	public GameObject skullDead;
 	public AudioClip deathSound;
+	public Slider healthbar;
+	public float recoverTime;
+	public GameObject edPanel;
 
 	private void Awake() {
 		rgb=GetComponent<Rigidbody2D>();
@@ -23,12 +26,15 @@ public class Health2 : MonoBehaviour {
 		player=GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerController>();
 	}
 	void Update(){
-		for(int i=0;i<hearts.Length;i++){
-			if(i<health){
-				hearts[i].enabled=true;
-			}else{
-				hearts[i].enabled=false;
-			}
+		// for(int i=0;i<hearts.Length;i++){
+		// 	if(i<health){
+		// 		hearts[i].enabled=true;
+		// 	}else{
+		// 		hearts[i].enabled=false;
+		// 	}
+		// }
+		if(health>50){
+			health=50;
 		}
 		if(health<=0){
 			
@@ -36,9 +42,8 @@ public class Health2 : MonoBehaviour {
 				Instantiate(skullDead,transform.GetChild(0).transform.position,Quaternion.identity);
 				AudioSource.PlayClipAtPoint(deathSound,transform.position);
 				Invoke("Lost",2f);
-			
-			
 		}
+		healthbar.value=health;
 		
 	}
 	private void OnTriggerEnter2D(Collider2D other) {
@@ -47,6 +52,14 @@ public class Health2 : MonoBehaviour {
 		}
 		if(other.CompareTag("bosssword")){
 			TakenDamage(1);
+		}
+		if(other.CompareTag("health")){
+			health+=40;
+			Destroy(other.gameObject);
+		}
+		if(other.CompareTag("ed")){
+			edPanel.SetActive(true);
+			Invoke("ed",2f);
 		}
 	}
 	void Lost(){
@@ -57,5 +70,8 @@ public class Health2 : MonoBehaviour {
 		health=health-damage;
 		AudioSource.PlayClipAtPoint(hurtSound,this.transform.position);
 		player.Damage();
+	}
+	void ed(){
+		SceneManager.LoadScene(0);
 	}
 }

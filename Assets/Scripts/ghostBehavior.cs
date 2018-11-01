@@ -8,6 +8,7 @@ public class ghostBehavior : MonoBehaviour {
 	public GameObject dameffect;
 	private GameObject player2;
 	public float speed;
+	public int ghostDam;
 	// Use this for initialization
 	void Start () {
 		player2=GameObject.FindGameObjectWithTag("Player2");
@@ -27,9 +28,9 @@ public class ghostBehavior : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag=="Player2"){
 			if(SceneManager.GetActiveScene().name=="Level_1"){
-				other.gameObject.GetComponent<Health>().TakenDamage(1);
+				other.gameObject.GetComponent<Health>().TakenDamage(ghostDam);
 			}else if(SceneManager.GetActiveScene().name=="Level_2"){
-				other.gameObject.GetComponent<Health2>().TakenDamage(1);
+				other.gameObject.GetComponent<Health2>().TakenDamage(ghostDam);
 			}
 			
 			

@@ -240,12 +240,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d3ed43152fbfb4b942349f84ac33c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 20
   speed: 0
   dameffect: {fileID: 1820061236963564, guid: f518f6f646d915d40badca437d6dd55e, type: 2}
   moveLeft: 0
   roll_spawner: {fileID: 0}
   zzz: 0
+  ene_dam: 0
 --- !u!212 &212630677715080442
 SpriteRenderer:
   m_ObjectHideFlags: 1

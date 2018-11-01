@@ -118,9 +118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e918b021b20c1418a534cdd217beba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 10
   dameffect: {fileID: 1820061236963564, guid: 2f4f1748a95bb554c9124b817c6ccb8f, type: 2}
   speed: 0.13
+  ghostDam: 5
 --- !u!212 &212032522956039518
 SpriteRenderer:
   m_ObjectHideFlags: 1

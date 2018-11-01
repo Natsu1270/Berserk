@@ -22,11 +22,10 @@ private AudioSource pop;
 	}
 	// Update is called once per frame
 	void Update () {
-		if(SceneManager.GetActiveScene().buildIndex==0){
+		
 			if(Input.anyKeyDown){
 				pop.Play();
-				LoadNextLevel();
 			}
-		}
+		
 	}
 }

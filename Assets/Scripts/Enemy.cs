@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour {
 	private AudioSource hurt;
 	public GameObject roll_spawner;
 	public bool zzz=false;
+	public int ene_dam;
 
 	void Start(){
 		hurt=GetComponent<AudioSource>();
@@ -53,9 +54,9 @@ public class Enemy : MonoBehaviour {
 		
 		if(other.gameObject.tag=="Player2"){
 			if(SceneManager.GetActiveScene().name=="Level_1"){
-				other.gameObject.GetComponent<Health>().TakenDamage(1);
+				other.gameObject.GetComponent<Health>().TakenDamage(ene_dam);
 			}else if(SceneManager.GetActiveScene().name=="Level_2"){
-				other.gameObject.GetComponent<Health2>().TakenDamage(1);
+				other.gameObject.GetComponent<Health2>().TakenDamage(ene_dam);
 			}
 				
 		}
