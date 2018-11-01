@@ -9,8 +9,10 @@ public class ghostBehavior : MonoBehaviour {
 	private GameObject player2;
 	public float speed;
 	public int ghostDam;
+	private AudioSource s;
 	// Use this for initialization
 	void Start () {
+		s=GetComponent<AudioSource>();
 		player2=GameObject.FindGameObjectWithTag("Player2");
 	}
 	
@@ -18,6 +20,7 @@ public class ghostBehavior : MonoBehaviour {
 	void Update () {
 		this.transform.position=Vector2.MoveTowards(transform.position,player2.transform.position,speed);
 		if(health<=0){
+			s.Play();
 			Instantiate(dameffect,transform.position,Quaternion.identity);
 			Destroy(gameObject);
 		}

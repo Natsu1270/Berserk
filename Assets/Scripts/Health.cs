@@ -15,6 +15,7 @@ public class Health : MonoBehaviour {
 	public AudioClip deathSound;
 	public Slider healthbar;
 	public float recoverTime;
+	private RipplePostProcessor ripple;
 
 	private void Awake() {
 		rgb=GetComponent<Rigidbody2D>();
@@ -22,6 +23,7 @@ public class Health : MonoBehaviour {
 		transform.position=ckm.lastcheckpoint;
 	}
 	void Start(){
+		ripple=Camera.main.GetComponent<RipplePostProcessor>();
 		player=GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerController>();
 	}
 	void Update(){
@@ -54,6 +56,7 @@ public class Health : MonoBehaviour {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 	public void TakenDamage(int damage){
+		ripple.RippleEffect();
 		rgb.velocity=Vector2.up*50;
 		health=health-damage;
 		AudioSource.PlayClipAtPoint(hurtSound,this.transform.position);

@@ -18,9 +18,11 @@ public class boss1 : MonoBehaviour {
 	private bool playonce=true;
 	public AudioClip deadsound;
 	private LevelMusic lvm;
+	private RipplePostProcessor ripple;
 
 	// Use this for initialization
 	void Start () {
+		ripple=Camera.main.GetComponent<RipplePostProcessor>();
 		lvm=GameObject.FindGameObjectWithTag("lvMusic").GetComponent<LevelMusic>();
 		lvm.music.Pause();
 		ghosts=GameObject.FindGameObjectsWithTag("Ghost");
@@ -55,6 +57,7 @@ public class boss1 : MonoBehaviour {
 		boss1HealthBar.value=boss1Health;
 	}
 	public void TakeDame(int dam){
+		ripple.RippleEffect();
 		Instantiate(dameffect,transform.GetChild(0).transform.position,Quaternion.identity);
 		boss1Health-=dam;
 	}

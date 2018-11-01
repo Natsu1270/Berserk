@@ -14,8 +14,11 @@ public class Enemy : MonoBehaviour {
 	public GameObject roll_spawner;
 	public bool zzz=false;
 	public int ene_dam;
-
+	public AudioClip deadsound;
+	public GameObject bloodStain;
+	private RipplePostProcessor ripple;
 	void Start(){
+		ripple=Camera.main.GetComponent<RipplePostProcessor>();
 		hurt=GetComponent<AudioSource>();
 		int ran=Random.Range(0,1);
 		if(ran==1) moveLeft=true;
@@ -27,6 +30,9 @@ public class Enemy : MonoBehaviour {
 	}
 	void Update(){
 		if(health<=0){
+			ripple.RippleEffect();
+			Instantiate(bloodStain,transform.position-new Vector3(0f,2f),Quaternion.identity);
+			AudioSource.PlayClipAtPoint(deadsound,transform.position);
 			Destroy(gameObject);
 		}
 		if(moveLeft){

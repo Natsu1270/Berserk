@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Boss : MonoBehaviour {
-    private LevelMusic lvm;
+   private LevelMusic lvm;
     public int health;
     public int damage;
     private float timeBtwDamage = 1.5f;
@@ -19,9 +19,11 @@ public class Boss : MonoBehaviour {
     public GameObject bossDeathEff;
     private AudioSource S;
     public AudioSource edingsong;
+    private RipplePostProcessor ripple;
 
     private void Start()
     {
+		ripple=Camera.main.GetComponent<RipplePostProcessor>();
 		lvm=GameObject.FindGameObjectWithTag("lvMusic").GetComponent<LevelMusic>();
         S=GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
@@ -70,5 +72,9 @@ public class Boss : MonoBehaviour {
     void bossdead(){
         edingsong.Play();
         Destroy(gameObject);
+    }
+    public void TakeDamage(int damage){
+        ripple.RippleEffect();
+        health-=damage;
     }
 }

@@ -10,7 +10,7 @@ public class cursor : MonoBehaviour {
 	void Start () {
 		trail=GetComponent<TrailRenderer>();
 		Cursor.visible=false;
-		DontDestroyOnLoad(gameObject);
+		//DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame

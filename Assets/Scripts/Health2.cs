@@ -16,8 +16,11 @@ public class Health2 : MonoBehaviour {
 	public Slider healthbar;
 	public float recoverTime;
 	public GameObject edPanel;
+	private RipplePostProcessor ripple;
+	public GameObject edeff;
 
 	private void Awake() {
+		ripple=Camera.main.GetComponent<RipplePostProcessor>();
 		rgb=GetComponent<Rigidbody2D>();
 		//ckm=GameObject.FindGameObjectWithTag("ckm2").GetComponent<checkPointMana>();
 		//transform.position=ckm.lastcheckpoint;
@@ -54,24 +57,33 @@ public class Health2 : MonoBehaviour {
 			TakenDamage(1);
 		}
 		if(other.CompareTag("health")){
-			health+=40;
+			health+=30;
 			Destroy(other.gameObject);
 		}
-		if(other.CompareTag("ed")){
+		
+		if(other.CompareTag("ene_fire")){
+			TakenDamage(3);
+		}
+	}
+	private void OnCollisionEnter2D(Collision2D other) {
+		if(other.gameObject.tag=="ed"){
+			other.gameObject.GetComponent<AudioSource>().Play();
+			Instantiate(edeff,transform.position,Quaternion.identity);
 			edPanel.SetActive(true);
-			Invoke("ed",2f);
+			Invoke("edd",2f);
 		}
 	}
 	void Lost(){
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 	public void TakenDamage(int damage){
+		ripple.RippleEffect();
 		rgb.velocity=Vector2.up*50;
 		health=health-damage;
 		AudioSource.PlayClipAtPoint(hurtSound,this.transform.position);
 		player.Damage();
 	}
-	void ed(){
+	void edd(){
 		SceneManager.LoadScene(0);
 	}
 }

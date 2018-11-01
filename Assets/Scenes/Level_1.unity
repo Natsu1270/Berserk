@@ -323,6 +323,8 @@ MonoBehaviour:
   roll_spawner: {fileID: 0}
   zzz: 1
   ene_dam: 5
+  deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
+  bloodStain: {fileID: 1486725919697766, guid: da4fb58e7364e16468fa8eca410a585d, type: 2}
 --- !u!61 &11453932
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1370,6 +1372,8 @@ MonoBehaviour:
   roll_spawner: {fileID: 1721717950}
   zzz: 0
   ene_dam: 0
+  deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
+  bloodStain: {fileID: 1486725919697766, guid: da4fb58e7364e16468fa8eca410a585d, type: 2}
 --- !u!50 &156574209
 Rigidbody2D:
   serializedVersion: 4
@@ -3143,6 +3147,8 @@ MonoBehaviour:
   roll_spawner: {fileID: 0}
   zzz: 0
   ene_dam: 0
+  deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
+  bloodStain: {fileID: 1486725919697766, guid: da4fb58e7364e16468fa8eca410a585d, type: 2}
 --- !u!50 &369212173
 Rigidbody2D:
   serializedVersion: 4
@@ -4072,7 +4078,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 1383381300}
   sentences:
-  - wwwww
+  - 'The Void: Good job Berserk you''ve killed SwordMasterBoss.'
+  - 'Berserk: My sword skill and style are just best.'
+  - 'The Void: Hmm, time to use gun instead of sword.'
+  - 'Berserk: Bazoka is good for me.'
+  - 'The Void: Here you go,little buddy..'
   typingSpeed: 0.01
 --- !u!1 &467381217
 GameObject:
@@ -5000,6 +5010,8 @@ MonoBehaviour:
   roll_spawner: {fileID: 0}
   zzz: 0
   ene_dam: 0
+  deadsound: {fileID: 0}
+  bloodStain: {fileID: 0}
 --- !u!60 &589082640
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5647,6 +5659,8 @@ MonoBehaviour:
   roll_spawner: {fileID: 0}
   zzz: 0
   ene_dam: 0
+  deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
+  bloodStain: {fileID: 1486725919697766, guid: da4fb58e7364e16468fa8eca410a585d, type: 2}
 --- !u!61 &651424408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7769,6 +7783,8 @@ MonoBehaviour:
   roll_spawner: {fileID: 0}
   zzz: 0
   ene_dam: 0
+  deadsound: {fileID: 0}
+  bloodStain: {fileID: 0}
 --- !u!60 &827527791
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8689,7 +8705,7 @@ Prefab:
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.size
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4543744329658176, guid: d332396dc354ead46a259c4c2b86dc2c, type: 2}
       propertyPath: m_LocalPosition.x
@@ -8731,7 +8747,7 @@ Prefab:
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[0]
-      value: Berserk:WTF! A ghost in daylight???
+      value: 'Berserk: WTF! A ghost in daylight???'
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
@@ -8745,98 +8761,99 @@ Prefab:
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[1]
-      value: 'The Void: Ghost doesn''t exist for a strong mind.'
+      value: 'The Void: Ghost does exist but not a matter for a strong mind.'
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[2]
-      value: 'Berserk: Yep,I don''t belive in ghost. So who are you? and where is
-        this place?'
+      value: 'Berserk: Yes,I''m not scared of ghost. So who are you,you look weird
+        to me.'
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[3]
-      value: 'The Void: I come from the Void,and this is where you start you fate,Berserk.'
+      value: 'The Void: I come from the void,and i''m here to help you overcome your
+        fate.'
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[4]
-      value: Berserk:You know my name???what fate.
+      value: 'The Void: with a sword of Hollow Knight.'
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[5]
-      value: 'The Void: You don''t need to know why.But go and face your fate.'
+      value: 'Berserk: Really?What will I do now?'
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[6]
-      value: 'The Void: I give you some helpful stuff.'
+      value: 'The Void: Just go aheap, fight and kill all your enemies.'
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[7]
-      value: 'Berserk: Sword and shield.Cool man!!!'
+      value: 'Berserk: OK let''s do it...'
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[8]
-      value: 'The Void: There no time to waste.Go for it!!!'
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[9]
-      value: 'Berserk: I don''t know who you are but thanks.Will I meet you again.'
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[10]
-      value: 'The Void: Don''t you worry I''ll be back if you have problem.'
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[11]
-      value: Berserk:You know my name???what fate.
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[12]
-      value: Berserk:You know my name???what fate.
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[13]
-      value: Berserk:You know my name???what fate.
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[14]
-      value: Berserk:You know my name???what fate.
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[15]
-      value: Berserk:You know my name???what fate.
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[16]
-      value: Berserk:You know my name???what fate.
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[17]
-      value: Berserk:You know my name???what fate.
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[18]
-      value: Berserk:You know my name???what fate.
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
       propertyPath: sentences.Array.data[19]
-      value: Berserk:You know my name???what fate.
+      value: Berserk:WTF! A ghost in daylight???
       objectReference: {fileID: 0}
     - target: {fileID: 114714421777840810, guid: d332396dc354ead46a259c4c2b86dc2c,
         type: 2}
@@ -10431,12 +10448,12 @@ Prefab:
     - target: {fileID: 224173894891912054, guid: 39376aa46c14d454a93bc07f91be72f7,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -464
+      value: -540
       objectReference: {fileID: 0}
     - target: {fileID: 224173894891912054, guid: 39376aa46c14d454a93bc07f91be72f7,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 673
+      value: 713
       objectReference: {fileID: 0}
     - target: {fileID: 224173894891912054, guid: 39376aa46c14d454a93bc07f91be72f7,
         type: 2}
@@ -10492,6 +10509,16 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224173894891912054, guid: 39376aa46c14d454a93bc07f91be72f7,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 224173894891912054, guid: 39376aa46c14d454a93bc07f91be72f7,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39376aa46c14d454a93bc07f91be72f7, type: 2}
@@ -10975,81 +11002,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1179216789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1179216791}
-  - component: {fileID: 1179216790}
-  m_Layer: 0
-  m_Name: lights03_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1179216790
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1179216789}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: d2083f9aeb8b07f45b809b714347784a, type: 3}
-  m_Color: {r: 0.9339623, g: 0.8331362, b: 0.066082224, a: 0.23137255}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4.01, y: 13.59}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1179216791
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1179216789}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7684099, w: 0.6399579}
-  m_LocalPosition: {x: -107, y: -1, z: 0}
-  m_LocalScale: {x: 7.703983, y: 204.9785, z: 1.9379463}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 33
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 100.423004}
 --- !u!1001 &1189658007
 Prefab:
   m_ObjectHideFlags: 0
@@ -11345,6 +11297,7 @@ GameObject:
   - component: {fileID: 1254659680}
   - component: {fileID: 1254659682}
   - component: {fileID: 1254659681}
+  - component: {fileID: 1254659683}
   m_Layer: 9
   m_Name: Grass
   m_TagString: grass
@@ -11360,8 +11313,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1254659679}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.29, y: -19.9, z: 0.06181181}
-  m_LocalScale: {x: 1.2816336, y: 1.64312, z: 1.786}
+  m_LocalPosition: {x: 3.383, y: -19.869, z: 0.06181181}
+  m_LocalScale: {x: 1.2726622, y: 1.6464063, z: 1.786}
   m_Children: []
   m_Father: {fileID: 1434308902}
   m_RootOrder: 5
@@ -11438,6 +11391,51 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!331 &1254659683
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254659679}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 5ee87e96f4df2c448b1d24989304c3a3, type: 3}
+  m_MaskAlphaCutoff: 0.2
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 0
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1261068533 stripped
 GameObject:
@@ -11694,11 +11692,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4624790427901476, guid: 08c13941f49adf44b8fc10b872d476e1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 624.8
+      value: 619.3
       objectReference: {fileID: 0}
     - target: {fileID: 4624790427901476, guid: 08c13941f49adf44b8fc10b872d476e1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 104.2
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 4624790427901476, guid: 08c13941f49adf44b8fc10b872d476e1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11949,6 +11947,11 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d7f12ee9eb5738a4b83047405ef89906, type: 3}
+    - target: {fileID: 212922238411355138, guid: 08c13941f49adf44b8fc10b872d476e1,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08c13941f49adf44b8fc10b872d476e1, type: 2}
   m_IsPrefabAsset: 0
@@ -12780,81 +12783,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1411573746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1411573748}
-  - component: {fileID: 1411573747}
-  m_Layer: 0
-  m_Name: lights03_0 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1411573747
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1411573746}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: d2083f9aeb8b07f45b809b714347784a, type: 3}
-  m_Color: {r: 0.9339623, g: 0.8331362, b: 0.066082224, a: 0.16862746}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4.01, y: 13.59}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1411573748
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1411573746}
-  m_LocalRotation: {x: -0, y: -0, z: 0.73979867, w: 0.67282844}
-  m_LocalPosition: {x: -113.9, y: 23.6, z: 0}
-  m_LocalScale: {x: 8.951705, y: 109.99486, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 34
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 95.429}
 --- !u!1 &1411952818
 GameObject:
   m_ObjectHideFlags: 0
@@ -13205,6 +13133,8 @@ MonoBehaviour:
   roll_spawner: {fileID: 0}
   zzz: 1
   ene_dam: 5
+  deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
+  bloodStain: {fileID: 1486725919697766, guid: da4fb58e7364e16468fa8eca410a585d, type: 2}
 --- !u!61 &1444472527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13705,6 +13635,8 @@ MonoBehaviour:
   roll_spawner: {fileID: 0}
   zzz: 0
   ene_dam: 0
+  deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
+  bloodStain: {fileID: 1486725919697766, guid: da4fb58e7364e16468fa8eca410a585d, type: 2}
 --- !u!82 &1450449550
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14682,6 +14614,7 @@ GameObject:
   - component: {fileID: 1562880254}
   - component: {fileID: 1562880256}
   - component: {fileID: 1562880255}
+  - component: {fileID: 1562880257}
   m_Layer: 9
   m_Name: Grass (8)
   m_TagString: grass
@@ -14776,6 +14709,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!331 &1562880257
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1562880253}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 5ee87e96f4df2c448b1d24989304c3a3, type: 3}
+  m_MaskAlphaCutoff: 0.2
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 0
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1568505354
 GameObject:
   m_ObjectHideFlags: 0
@@ -14787,6 +14765,8 @@ GameObject:
   - component: {fileID: 1568505356}
   - component: {fileID: 1568505355}
   - component: {fileID: 1568505358}
+  - component: {fileID: 1568505359}
+  - component: {fileID: 1568505360}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14890,6 +14870,32 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1568505359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1568505354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 778ed10ddb61f7445952754de0f9e293, type: 2}
+--- !u!114 &1568505360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1568505354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4712a2a027cdeab469394be0725820f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RippleMaterial: {fileID: 2100000, guid: 55ce66a1486deaa419ea7c4e9d5d2cf7, type: 2}
+  MaxAmount: 12
+  Friction: 0.9
 --- !u!1 &1570047759
 GameObject:
   m_ObjectHideFlags: 0
@@ -16763,7 +16769,7 @@ MonoBehaviour:
     m_Bits: 1024
   attackRange: 8
   damage: 5
-  swordSound: {fileID: 8300000, guid: 6ddb7ea83b1849644b13ce165e1c1391, type: 3}
+  swordSound: {fileID: 8300000, guid: 01828cd1f5a1c864a9679f861b312d68, type: 3}
   slash: {fileID: 1172234336717566, guid: 24a804198e92ebd499d3b5929945dd86, type: 2}
   boss: {fileID: 1261068533}
 --- !u!114 &1782169150

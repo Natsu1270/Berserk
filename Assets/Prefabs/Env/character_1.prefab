@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 82408693532954936}
   - component: {fileID: 114608209230907906}
   - component: {fileID: 95299978537581700}
+  - component: {fileID: 114623867863417748}
+  - component: {fileID: 114991233455788464}
   m_Layer: 10
   m_Name: character_1
   m_TagString: run_ene
@@ -247,6 +249,33 @@ MonoBehaviour:
   roll_spawner: {fileID: 0}
   zzz: 0
   ene_dam: 0
+  deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
+  bloodStain: {fileID: 0}
+--- !u!114 &114623867863417748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424265622512062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4e0ca0441340d4fb1789ed0fdebf3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pojectile: {fileID: 1075083084289158, guid: fe6b14a504d03f141872dfefb16273cd, type: 2}
+  initTimeFire: 1
+--- !u!114 &114991233455788464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424265622512062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b1c0c1b51d74248a00484fec0b8adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart: {fileID: 1964061554928628, guid: 8383f47a6c5bf8549a2643ac393b21f7, type: 2}
 --- !u!212 &212630677715080442
 SpriteRenderer:
   m_ObjectHideFlags: 1

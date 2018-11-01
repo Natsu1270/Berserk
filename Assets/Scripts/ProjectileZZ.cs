@@ -26,7 +26,7 @@ public class ProjectileZZ : MonoBehaviour {
             }else if(hitInfo.collider.CompareTag("Ghost")){
                 hitInfo.collider.GetComponent<ghostBehavior>().TakenDamage(damage);
             }else if(hitInfo.collider.CompareTag("Boss")){
-                hitInfo.collider.GetComponent<Boss>().health-=damage;
+                hitInfo.collider.GetComponent<Boss>().TakeDamage(damage);
             }
 
             DestroyProjectile();

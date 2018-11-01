@@ -14,8 +14,10 @@ public class PlayerAttack : MonoBehaviour {
 	public GameObject slash;
 	public GameObject boss;
 	private PlayerController playerController;
+	private RipplePostProcessor ripple;
 	
 	void Start(){
+		ripple=Camera.main.GetComponent<RipplePostProcessor>();
 		playerController=GetComponent<PlayerController>();
 		playeranime=GetComponent<Animator>();
 		timeBtwAttack=0;
@@ -24,6 +26,7 @@ public class PlayerAttack : MonoBehaviour {
 	void Update () {
 		if(timeBtwAttack<=0){
 			if(Input.GetKeyDown(KeyCode.Z)){
+				ripple.RippleEffect();
 				Vector3 sPos=new Vector3(5f,0f,0f);
 				if(playerController.facingRight){
 					Instantiate(slash,transform.GetChild(0).transform.position+sPos,Quaternion.identity);

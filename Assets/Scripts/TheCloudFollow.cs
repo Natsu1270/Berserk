@@ -25,7 +25,7 @@ public class TheCloudFollow : MonoBehaviour {
 			player=GameObject.FindGameObjectWithTag("Player2");
 			playerPos=player.GetComponent<Transform>();
 		}
-		newPos=new Vector3(playerPos.position.x-xDistance-7f,playerPos.position.y+yDistance,playerPos.position.z);
+		newPos=new Vector3(playerPos.position.x+xDistance-7f,playerPos.position.y+yDistance,playerPos.position.z);
 		transform.position=Vector2.MoveTowards(transform.position,newPos,floatSpeed*Time.deltaTime);
 	}
 }

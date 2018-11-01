@@ -33,6 +33,7 @@ TagManager:
   - Boss
   - health
   - ed
+  - ene_fire
   layers:
   - Default
   - TransparentFX
