@@ -1720,6 +1720,21 @@ Prefab:
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224658673469916242, guid: 39376aa46c14d454a93bc07f91be72f7,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -266
+      objectReference: {fileID: 0}
+    - target: {fileID: 224490278358105796, guid: 39376aa46c14d454a93bc07f91be72f7,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -54
+      objectReference: {fileID: 0}
+    - target: {fileID: 224490278358105796, guid: 39376aa46c14d454a93bc07f91be72f7,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 173
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39376aa46c14d454a93bc07f91be72f7, type: 2}
   m_IsPrefabAsset: 0
@@ -3040,7 +3055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RippleMaterial: {fileID: 2100000, guid: 55ce66a1486deaa419ea7c4e9d5d2cf7, type: 2}
-  MaxAmount: 12
+  MaxAmount: 15
   Friction: 0.9
 --- !u!1 &589764691
 GameObject:

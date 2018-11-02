@@ -25,7 +25,7 @@ public class textMenu : MonoBehaviour {
 			musicSlider.gameObject.SetActive(false);
 			optionDetail.gameObject.SetActive(true);
 			menuText.text="How To Play";
-			optionDetail.text="Ready to fight!";
+			optionDetail.text="Use AWD or arrow key to move,right mouse to fire. ";
 		}else if(eventSystem.currentSelectedGameObject==btns[2].gameObject){
 			optionDetail.gameObject.SetActive(false);
 			menuText.text="Music";
