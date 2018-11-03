@@ -217,7 +217,7 @@ MonoBehaviour:
   health: 10
   dameffect: {fileID: 1820061236963564, guid: 2f4f1748a95bb554c9124b817c6ccb8f, type: 2}
   speed: 0.13
-  ghostDam: 5
+  ghostDam: 3
 --- !u!212 &212032522956039518
 SpriteRenderer:
   m_ObjectHideFlags: 1

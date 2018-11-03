@@ -25,7 +25,7 @@ public class PlayerAttack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(timeBtwAttack<=0){
-			if(Input.GetKeyDown(KeyCode.Z)){
+			if(Input.GetKeyDown(KeyCode.Space)){
 				ripple.RippleEffect();
 				Vector3 sPos=new Vector3(5f,0f,0f);
 				if(playerController.facingRight){

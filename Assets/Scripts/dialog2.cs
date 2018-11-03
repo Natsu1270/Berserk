@@ -21,7 +21,7 @@ public class dialog2 : MonoBehaviour {
 			if(textDisplay.text==sentences[index]){
 				canSpace=true;
 			}
-			if(Input.GetKeyDown(KeyCode.Space)){
+			if(Input.GetKeyDown(KeyCode.Return)){
 				if(canSpace)
 					NextSentence();
 			}

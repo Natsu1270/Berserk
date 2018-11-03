@@ -28,7 +28,7 @@ public class DialogController : MonoBehaviour {
 				contBtn.SetActive(true);
 				canSpace=true;
 			}
-			if(Input.GetKeyDown(KeyCode.Space)){
+			if(Input.GetKeyDown(KeyCode.Return)){
 				if(canSpace)
 					NextSentence();
 			}

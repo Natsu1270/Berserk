@@ -27,7 +27,7 @@ public class Weapon : MonoBehaviour {
 
         if (timeBtwShots <= 0)
         {
-            if (Input.GetMouseButton(1))
+            if (Input.GetMouseButton(0)||Input.GetKey(KeyCode.Return))
             {
                 //AudioSource.PlayClipAtPoint(bubble,shotPoint.position);
                 shotSound.Play();

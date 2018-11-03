@@ -322,7 +322,7 @@ MonoBehaviour:
   moveLeft: 1
   roll_spawner: {fileID: 0}
   zzz: 1
-  ene_dam: 5
+  ene_dam: 3
   deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
   bloodStain: {fileID: 1486725919697766, guid: da4fb58e7364e16468fa8eca410a585d, type: 2}
 --- !u!61 &11453932
@@ -3224,7 +3224,7 @@ MonoBehaviour:
   moveLeft: 0
   roll_spawner: {fileID: 0}
   zzz: 0
-  ene_dam: 5
+  ene_dam: 3
   deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
   bloodStain: {fileID: 1486725919697766, guid: da4fb58e7364e16468fa8eca410a585d, type: 2}
 --- !u!50 &369212173
@@ -10688,7 +10688,7 @@ Prefab:
     - target: {fileID: 224173894891912054, guid: 39376aa46c14d454a93bc07f91be72f7,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -540
+      value: -480
       objectReference: {fileID: 0}
     - target: {fileID: 224173894891912054, guid: 39376aa46c14d454a93bc07f91be72f7,
         type: 2}
@@ -10769,6 +10769,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
       value: -51
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423799753643504, guid: 39376aa46c14d454a93bc07f91be72f7,
+        type: 2}
+      propertyPath: m_WholeNumbers
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39376aa46c14d454a93bc07f91be72f7, type: 2}
@@ -11704,7 +11709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss1Health: 50
-  boss1Damage: 5
+  boss1Damage: 3
   boss1HealthBar: {fileID: 5187639}
   isDead: 0
   dameffect: {fileID: 1820061236963564, guid: f518f6f646d915d40badca437d6dd55e, type: 2}
@@ -13460,7 +13465,7 @@ MonoBehaviour:
   moveLeft: 1
   roll_spawner: {fileID: 0}
   zzz: 1
-  ene_dam: 5
+  ene_dam: 3
   deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
   bloodStain: {fileID: 1486725919697766, guid: da4fb58e7364e16468fa8eca410a585d, type: 2}
 --- !u!61 &1444472527
@@ -13962,7 +13967,7 @@ MonoBehaviour:
   moveLeft: 0
   roll_spawner: {fileID: 0}
   zzz: 0
-  ene_dam: 5
+  ene_dam: 3
   deadsound: {fileID: 8300000, guid: ac0c9077a7d21b6478d9a6cceb80f38d, type: 3}
   bloodStain: {fileID: 1486725919697766, guid: da4fb58e7364e16468fa8eca410a585d, type: 2}
 --- !u!82 &1450449550
@@ -14138,7 +14143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e8c4ce78fb3d54683a67fa45cabeb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  health: 80
   hurtSound: {fileID: 0}
   skullDead: {fileID: 0}
   deathSound: {fileID: 0}
@@ -15898,7 +15903,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Space to continue
+  m_text: 'Press Enter to continue
 
 
 '
@@ -15946,7 +15951,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 18
+  m_firstOverflowCharacterIndex: 24
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -15966,13 +15971,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -154.73141, y: 0, z: 0, w: 0}
+  m_margin: {x: -343.73843, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1643657540}
-    characterCount: 19
+    characterCount: 25
     spriteCount: 0
-    spaceCount: 4
-    wordCount: 3
+    spaceCount: 5
+    wordCount: 4
     linkCount: 0
     lineCount: 2
     pageCount: 1
@@ -19955,7 +19960,7 @@ Prefab:
     - target: {fileID: 114207164217639628, guid: 878d56560ab67c04eac6dafa102e517d,
         type: 2}
       propertyPath: health
-      value: 50
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 114207164217639628, guid: 878d56560ab67c04eac6dafa102e517d,
         type: 2}
