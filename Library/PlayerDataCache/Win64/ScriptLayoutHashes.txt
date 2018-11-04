@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-D:/Game/Berserk/Berserk.exe
+D:/Berserk/Window/Berserk.exe
 SceneListBegin?
 Assets/Scenes/Intro Scene.unity
 Assets/Scenes/Start Menu.unity
