@@ -32,7 +32,7 @@ public class Boss : MonoBehaviour {
     private void Update()
     {
 
-        if (health <= 50) {
+        if (health <= 80) {
             anim.SetTrigger("stageTwo");
         }
 
