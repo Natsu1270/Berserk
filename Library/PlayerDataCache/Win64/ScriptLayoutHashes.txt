@@ -169,7 +169,7 @@ da55fa574d80a5a4a2a25fc41969a324 Cinemachine.dll:Cinemachine.CinemachinePOV
 8108bea236269b65916ab2e734962ce1 Assembly-CSharp.dll:.continuenumber
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 ffc9edfffe794960144e773ada07ed2e Cinemachine.dll:Cinemachine.CinemachineOrbitalTransposer
-79d4918013b989407816a9737e1de0dc Assembly-CSharp.dll:.dialog2
+4ec0676c5c2a412600589eb0be4741ff Assembly-CSharp.dll:.dialog2
 769bc992ca1ae8693b0c56dc15e4af35 Cinemachine.dll:Cinemachine.CinemachineTriggerAction
 828f46dde6d4084ea4b104d9279f5210 Cinemachine.dll:Cinemachine.CinemachineComposer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.LevelManager
@@ -293,7 +293,7 @@ dd223b2cbb523615eee8980d99d61ddd Assembly-CSharp.dll:.EnvMapAnimator
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.finalboxload
 100e2930ad376c8fe30c77a204d5525d Assembly-CSharp.dll:.Health
 b7d6f0f8ffd6888c99b7e7f42979f900 Assembly-CSharp.dll:.TheCloudFollow
-e2018018ce0f5bf8bc2b05411f72eb14 Assembly-CSharp.dll:.Boss
+095bea621311a847551da6e8464a4da4 Assembly-CSharp.dll:.Boss
 894d229779bab72aa1866a07676cb6a5 Assembly-CSharp.dll:.Health2
 b7d6f0f8ffd6888c99b7e7f42979f900 Assembly-CSharp.dll:.TheSunFollow
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh

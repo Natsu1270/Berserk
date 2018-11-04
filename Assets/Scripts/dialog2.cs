@@ -7,7 +7,7 @@ public class dialog2 : MonoBehaviour {
 	public string[] sentences;
 	private int index=0;
 	public float typingSpeed;
-	
+	public GameObject contBtn;
 	private PlayerController player;
 	private bool canSpace=true;
 	
@@ -19,6 +19,7 @@ public class dialog2 : MonoBehaviour {
 		if(index<sentences.Length){
 			player.canMove=false;
 			if(textDisplay.text==sentences[index]){
+				contBtn.SetActive(true);
 				canSpace=true;
 			}
 			if(Input.GetKeyDown(KeyCode.Return)){
@@ -43,7 +44,7 @@ public class dialog2 : MonoBehaviour {
 		}
 	}
 	public void NextSentence(){
-		
+		contBtn.SetActive(false);
 		canSpace=false;
 		if(index<sentences.Length-1){
 			index++;
@@ -53,7 +54,7 @@ public class dialog2 : MonoBehaviour {
 			index++;
 			textDisplay.text="";
 			canSpace=false;
-			
+			contBtn.SetActive(false);
 		}
 	}
 }

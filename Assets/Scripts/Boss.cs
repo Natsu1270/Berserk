@@ -15,7 +15,7 @@ public class Boss : MonoBehaviour {
     public Slider healthBar;
     private Animator anim;
     public bool isDead;
-    public GameObject[] limits;
+    public GameObject limit;
     public GameObject bossDeathEff;
     private AudioSource S;
     public AudioSource edingsong;
@@ -37,9 +37,7 @@ public class Boss : MonoBehaviour {
         }
 
         if (health <= 0) {
-            foreach(GameObject l in limits){
-                Destroy(l);
-            }
+            Destroy(limit);
             if(playonce==true){
                 Instantiate(bossDeathEff,transform.GetChild(0).transform.position,Quaternion.identity);
 				GetComponent<AudioSource>().Play();
