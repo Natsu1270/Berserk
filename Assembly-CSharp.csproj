@@ -53,7 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\enddinggg.cs" />
+     <Compile Include="Assets\HeartSpw.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -99,10 +99,10 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-     <Compile Include="Assets\Prefabs\HeartSpw.cs" />
      <Compile Include="Assets\Scripts\attackBehavior.cs" />
      <Compile Include="Assets\Scripts\attackBehavior1.cs" />
      <Compile Include="Assets\Scripts\Boss.cs" />
+     <Compile Include="Assets\Scripts\Boss_Fire.cs" />
      <Compile Include="Assets\Scripts\boss1.cs" />
      <Compile Include="Assets\Scripts\ButtonSound.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
@@ -121,6 +121,7 @@
      <Compile Include="Assets\Scripts\destroyVoid.cs" />
      <Compile Include="Assets\Scripts\dialog2.cs" />
      <Compile Include="Assets\Scripts\DialogController.cs" />
+     <Compile Include="Assets\Scripts\enddinggg.cs" />
      <Compile Include="Assets\Scripts\ene_fire.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\enemyformation.cs" />

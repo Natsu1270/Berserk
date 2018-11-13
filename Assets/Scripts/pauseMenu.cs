@@ -35,7 +35,7 @@ public class pauseMenu : MonoBehaviour {
 	}
 	public void NewGame(){
 		Time.timeScale=1f;
-		checkPointMana.lastcheckpoint=new Vector3(-120f,-5.4f,0f);
+		checkPointMana.lastcheckpoint=new Vector3(-202.5f,-4.4f,0f);
 		SceneManager.LoadScene("Level_1");
 	}
 	public void Gohome(){

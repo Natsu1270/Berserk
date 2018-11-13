@@ -304,3 +304,4 @@ d3302f0d3a11c1f935a853ef728a088f Assembly-CSharp.dll:.heartSpw
 5f6f9b1bdbfe6ed5ee40451bad77f5ea Cinemachine.dll:Cinemachine.CinemachineClearShot
 855c7856fe1b636282d3605045d02986 Assembly-CSharp.dll:.playerHurt
 e7e8a974be1c59f52d644a6b3436f99f Assembly-CSharp.dll:.attackBehavior
+b6699e0f180a70f9dcdf95c1cfe590f3 Assembly-CSharp.dll:.Boss_Fire

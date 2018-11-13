@@ -46,7 +46,7 @@ public class Boss : MonoBehaviour {
 				playonce=false;
 			}
             anim.SetTrigger("death");
-            Invoke("bossdead",2f);
+            Invoke("bossdead",4f);
         }
 
         // give the player some time to recover before taking more damage !

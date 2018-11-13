@@ -49,7 +49,7 @@ public class boss1 : MonoBehaviour {
 			}
 			
 			boss1HealthBar.gameObject.SetActive(false);
-			Invoke("bossdead",1.5f);
+			Invoke("bossdead",3.5f);
 		}
 		if(timeBtwDamage>0){
 			timeBtwDamage-=Time.deltaTime;
